@@ -1,6 +1,7 @@
 source :rubygems
 
 gem "rails", "3.2.11"
+gem "rails-i18n"
 gem "mysql2"
 
 group :assets do
@@ -10,6 +11,13 @@ group :assets do
   gem "uglifier"
 end
 
+group :development do
+  gem "pry"
+  gem "pry-rails"
+  gem "awesome_print"
+end
+
 group :development, :test do
   gem "rspec-rails"
+  gem "capybara"
 end

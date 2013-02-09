@@ -1,0 +1,8 @@
+en:
+  helpers:
+    submit:
+      teacher:
+        create: "Save"
+  form:
+    teacher:
+      name: "Name"

@@ -1,0 +1,8 @@
+pt-BR:
+  helpers:
+    submit:
+      teacher:
+        create: "Salvar"
+  form:
+    teacher:
+      name: "Nome"

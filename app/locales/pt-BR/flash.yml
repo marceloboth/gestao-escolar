@@ -1,0 +1,5 @@
+pt-BR:
+  flash:
+    teacher:
+      create:
+        notice: "Cadastro salvo com sucesso"
