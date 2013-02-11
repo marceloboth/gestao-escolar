@@ -15,3 +15,11 @@ pt-BR:
         notice: "Matéria alterada com sucesso"
       remove:
         notice: "Matéria removida com sucesso"
+
+    classroom:
+      create:
+        notice: "Turma salva com sucesso"
+      update:
+        notice: "Turma alterada com sucesso"
+      remove:
+        notice: "Turma removida com sucesso"

@@ -7,3 +7,7 @@ pt-BR:
     discipline:
       new: "Novo"
       list: "Lista de Matérias"
+
+    classroom:
+      new: "Novo"
+      list: "Lista de Turmas"

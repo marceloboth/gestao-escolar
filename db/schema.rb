@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211152626) do
+ActiveRecord::Schema.define(:version => 20130211213344) do
+
+  create_table "classrooms", :force => true do |t|
+    t.string   "name",       :limit => 60, :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
 
   create_table "disciplines", :force => true do |t|
     t.text     "name",       :limit => 255, :null => false

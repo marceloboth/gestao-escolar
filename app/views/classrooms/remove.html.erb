@@ -1,0 +1,13 @@
+<h1>Remover turma</h1>
+
+<p>
+  Tem certeza que deseja remover a turma
+  <strong><%= @classroom.name %></strong>?
+</p>
+
+<%= form_tag remove_classroom_path(@classroom), :method => :delete do %>
+  <p class="submit">
+    <%= submit_tag t("helpers.submit.classroom.remove") %>
+    <%= link_to "Cancelar", list_classroom_path %>
+  </p>
+<% end %>
