@@ -1,0 +1,13 @@
+<h1>Remover matéria</h1>
+
+<p>
+  Tem certeza que deseja remover a matéria
+  <strong><%= @discipline.name %></strong>?
+</p>
+
+<%= form_tag remove_discipline_path(@discipline), :method => :delete do %>
+  <p class="submit">
+    <%= submit_tag t("helpers.submit.discipline.remove") %>
+    <%= link_to "Cancelar", list_discipline_path %>
+  </p>
+<% end %>

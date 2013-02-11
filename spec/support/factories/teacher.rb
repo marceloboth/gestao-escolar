@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :teacher do
-    name "Fake Teacher"
+    sequence(:name) {|n| "Teacher #{n}"}
   end
 
   preload do

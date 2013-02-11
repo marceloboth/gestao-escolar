@@ -43,6 +43,22 @@ GestaoEscolar::Application.routes.draw do
     post "/disciplines/new",
       :action => :create,
       :as => false
+
+    get  "/disciplines/:id/edit",
+      :action => :edit,
+      :as => :edit_discipline
+
+    put "/disciplines/:id/edit",
+      :action => :update,
+      :as => false
+
+    get  "/disciplines/:id/remove",
+      :action => :remove,
+      :as => :remove_discipline
+
+    delete "/disciplines/:id/remove",
+      :action => :destroy,
+      :as => false
   end
 
 end

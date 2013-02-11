@@ -15,7 +15,7 @@ describe "List disciplines" do
     end
 
     it "show disciplines" do
-      page.should have_selector("tr > td", :count => 2)
+      page.should have_selector("tr > td", :minimum => 2)
     end
   end
 

@@ -15,7 +15,7 @@ describe "List teachers" do
     end
 
     it "show teachers" do
-      page.should have_selector("tr > td", :count => 2)
+      page.should have_selector("tr > td", :minimum => 1)
     end
   end
 

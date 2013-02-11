@@ -1,9 +1,10 @@
 FactoryGirl.define do
-  factory :teacher do
-    name "Fake Teacher"
+  factory :discipline do
+    sequence(:name) {|n| "Discipline #{n}"}
+    association :teacher
   end
 
   preload do
-    factory(:fake) { create(:teacher) }
+    factory(:fake_discipline) { create(:discipline) }
   end
 end
