@@ -1,10 +1,2 @@
-<%= form_for @teacher, :url => "/teachers" do |f| %>
-  <p>
-    <%= f.label :name, t("form.teacher.name") %>
-    <%= f.text_field :name %>
-  </p>
-
-  <p class="submit">
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render "shared/form_errors", :record => @teacher %>
+<%= render "teachers/form", :record => @teacher, :route =>  new_teacher_path %>

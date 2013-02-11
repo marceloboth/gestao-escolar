@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    attributes:
+      teacher:
+        name: "Name"
+
+      discipline:
+        name: "Name"
+        teacher: "Teacher"

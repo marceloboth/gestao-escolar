@@ -2,4 +2,16 @@ pt-BR:
   flash:
     teacher:
       create:
-        notice: "Cadastro salvo com sucesso"
+        notice: "Professor salvo com sucesso"
+      update:
+        notice: "Professor alterado com sucesso"
+      remove:
+        notice: "Professor removido com sucesso"
+
+    discipline:
+      create:
+        notice: "Matéria salva com sucesso"
+      update:
+        notice: "Matéria alterada com sucesso"
+      remove:
+        notice: "Matéria removida com sucesso"

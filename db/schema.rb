@@ -11,18 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130209131042) do
+ActiveRecord::Schema.define(:version => 20130211152626) do
 
-  create_table "professores", :force => true do |t|
-    t.string   "nome",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "disciplines", :force => true do |t|
+    t.text     "name",       :limit => 255, :null => false
+    t.integer  "teacher_id"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
+
+  add_index "disciplines", ["teacher_id"], :name => "index_disciplines_on_teacher_id"
 
   create_table "teachers", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_foreign_key "disciplines", "teachers", :name => "disciplines_teacher_id_fk", :dependent => :nullify
 
 end

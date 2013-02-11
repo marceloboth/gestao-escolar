@@ -3,6 +3,7 @@ source :rubygems
 gem "rails", "3.2.11"
 gem "rails-i18n"
 gem "mysql2"
+gem "foreigner"
 
 group :assets do
   gem "sass-rails"
@@ -20,4 +21,6 @@ end
 group :development, :test do
   gem "rspec-rails"
   gem "capybara"
+  gem "factory_girl"
+  gem "factory_girl-preload"
 end

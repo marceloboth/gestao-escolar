@@ -1,0 +1,13 @@
+<h1>Remover pergunta</h1>
+
+<p>
+  Tem certeza que deseja remover o(a) professor(a)
+  <strong><%= @teacher.name %></strong>?
+</p>
+
+<%= form_tag remove_teacher_path(@teacher), :method => :delete do %>
+  <p class="submit">
+    <%= submit_tag t("helpers.submit.teacher.remove") %>
+    <%= link_to "Cancelar", list_teacher_path %>
+  </p>
+<% end %>

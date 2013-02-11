@@ -1,0 +1,11 @@
+<%= form_for record, :url => route do |f| %>
+
+  <p>
+    <%= f.label :name, t("form.teacher.name") %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p class="submit">
+    <%= f.submit %>
+  </p>
+<% end %>

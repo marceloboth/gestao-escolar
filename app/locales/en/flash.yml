@@ -1,0 +1,5 @@
+en:
+  flash:
+    teacher:
+      create:
+        notice: "Register save with sucess"

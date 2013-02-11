@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    attributes:
+      teacher:
+        name: "Nome"
+
+      discipline:
+        name: "Nome"
+        teacher: "Professor"

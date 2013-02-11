@@ -1,0 +1,22 @@
+<h1><%= t('titles.teacher.list') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <% @teachers.each do |teacher| %>
+    <tr>
+      <td><%= teacher.name %></td>
+      <td>
+        <%= link_to 'Editar',  edit_teacher_path(teacher.id) %>
+        <%= link_to 'Excluir', remove_teacher_path(teacher.id) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to t('titles.teacher.new'), new_teacher_path %></p>

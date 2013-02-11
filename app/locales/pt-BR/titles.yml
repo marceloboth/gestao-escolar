@@ -1,0 +1,9 @@
+pt-BR:
+  titles:
+    teacher:
+      new: "Novo"
+      list: "Lista de Professores"
+
+    discipline:
+      new: "Novo"
+      list: "Lista de Matérias"
