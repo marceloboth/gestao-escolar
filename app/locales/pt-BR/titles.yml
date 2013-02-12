@@ -11,3 +11,7 @@ pt-BR:
     classroom:
       new: "Novo"
       list: "Lista de Turmas"
+
+    student:
+      new: "Novo"
+      list: "Lista de Alunos"

@@ -91,4 +91,33 @@ GestaoEscolar::Application.routes.draw do
       :as => false
   end
 
+  controller :students do
+    get "/students",
+      :action => :index,
+      :as => :list_student
+
+    get  "/students/new",
+      :action => :new,
+      :as => :new_student
+
+    post "/students/new",
+      :action => :create,
+      :as => false
+
+    get  "/students/:id/edit",
+      :action => :edit,
+      :as => :edit_student
+
+    put "/students/:id/edit",
+      :action => :update,
+      :as => false
+
+    get  "/students/:id/remove",
+      :action => :remove,
+      :as => :remove_student
+
+    delete "/students/:id/remove",
+      :action => :destroy,
+      :as => false
+  end
 end

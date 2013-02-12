@@ -1,0 +1,15 @@
+<%= form_for record, :url => route do |f| %>
+  <p>
+    <%= f.label :name, t("form.student.name") %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :classroom_id, t("form.student.classroom") %>
+    <%= f.collection_select :classroom_id, Classroom.all, :id, :name, :include_blank => true %>
+  </p>
+
+  <p class="submit">
+    <%= f.submit %>
+  </p>
+<% end %>

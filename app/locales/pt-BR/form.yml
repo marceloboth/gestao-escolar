@@ -20,6 +20,12 @@ pt-BR:
         remove: "Remover"
         cancel: "Cancelar"
 
+      student:
+        create: "Salvar"
+        update: "Alterar"
+        remove: "Remover"
+        cancel: "Cancelar"
+
   form:
     error_message: "Verifique o formulário antes de prosseguir:"
 
@@ -32,3 +38,7 @@ pt-BR:
 
     classroom:
       name: "Nome"
+
+    student:
+      name: "Nome"
+      classroom: "Turma"

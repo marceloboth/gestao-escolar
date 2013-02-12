@@ -1,0 +1,13 @@
+<h1>Remover aluno</h1>
+
+<p>
+  Tem certeza que deseja remover o(a) aluno(a)
+  <strong><%= @student.name %></strong>?
+</p>
+
+<%= form_tag remove_student_path(@student), :method => :delete do %>
+  <p class="submit">
+    <%= submit_tag t("helpers.submit.student.remove") %>
+    <%= link_to "Cancelar", list_student_path %>
+  </p>
+<% end %>

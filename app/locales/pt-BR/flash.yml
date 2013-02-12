@@ -23,3 +23,11 @@ pt-BR:
         notice: "Turma alterada com sucesso"
       remove:
         notice: "Turma removida com sucesso"
+
+    student:
+      create:
+        notice: "Aluno salvo com sucesso"
+      update:
+        notice: "Aluno alterado com sucesso"
+      remove:
+        notice: "Aluno removido com sucesso"
