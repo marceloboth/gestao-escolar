@@ -1,0 +1,10 @@
+<% @classroom_disciplines.each do |disc| %>
+  <tr>
+    <td><%= disc.discipline.name %></td>
+    <td><%= disc.discipline.teacher.name %></td>
+    <td>
+      <%= link_to 'Editar', nil, :class => 'btn btn-mini' %>
+      <%= link_to "Excluir", nil, confirm: "Erase address?",
+        method: :delete, remote: true, :class => 'btn btn-mini btn-danger' %></td>
+  </tr>
+<% end %>

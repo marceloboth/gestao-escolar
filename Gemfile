@@ -6,11 +6,17 @@ gem "mysql2"
 gem "foreigner"
 
 group :assets do
-  gem "sass-rails"
-  # gem "therubyracer", "0.11.0", :platforms => :ruby
-  # gem "libv8"
+  gem "less-rails"
+  gem 'coffee-rails'
   gem "uglifier"
+  gem "twitter-bootstrap-rails"
 end
+
+gem 'jquery-rails'
+#workaround to not get 'could not find a javascript runtime' bug
+gem 'execjs'
+gem "therubyracer"
+
 
 group :development do
   gem "pry"

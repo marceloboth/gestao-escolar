@@ -15,7 +15,7 @@ describe  "New classroom" do
     end
 
     it "redirect to the list page" do
-      expect(current_path).to eql(list_classroom_path)
+      expect(current_path).to eql(show_classroom_path(5))
     end
 
     it "show the sucess message" do

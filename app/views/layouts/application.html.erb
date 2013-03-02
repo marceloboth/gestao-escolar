@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gestão escolar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <title>Gestão escolar</title>
 </head>
 <body>
-  <% flash.each do |type, message| %>
-    <p class="<%= type %>">
-      <%= message %>
-    </p>
-  <% end %>
-  <%= yield %>
-  <%= javascript_include_tag "application" %>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="#">Gestão Escolar</a>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3">
+        <div class="well">
+          <ul class="nav nav-list">
+            <li class="nav-header">Menu de Navegação</li>
+            <li><%= link_to t("menu.classroom"), list_classroom_path %></li>
+            <li><%= link_to t("menu.teacher"), list_teacher_path%></li>
+            <li><%= link_to t("menu.discipline"), list_discipline_path%></li>
+            <li><%= link_to t("menu.student"), list_student_path %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="span9">
+        <div class="row-fluid">
+          <div class="span12">
+
+            <div class="alert alert-success">
+              <% flash.each do |type, message| %>
+              <p class="<%= type %>">
+                <%= message %>
+              </p>
+              <% end %>
+            </div>
+
+
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="well">
+          <p align="center">
+            <strong>Painel desenvolvido pela Editora Devmedia</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

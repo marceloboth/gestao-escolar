@@ -1,11 +1,19 @@
-<%= form_for record, :url => route do |f| %>
+<%= form_for record, :url => route, :html => { :class => 'form-horizontal' } do |f| %>
 
-  <p>
-    <%= f.label :name, t("form.teacher.name") %>
-    <%= f.text_field :name %>
-  </p>
+<fieldset>
+  <legend><%= controller.action_name.capitalize %> Teacher</legend>
 
-  <p class="submit">
-    <%= f.submit %>
-  </p>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to 'Cancel', list_teacher_path, :class => 'btn' %>
+  </div>
+</fieldset>
+
 <% end %>

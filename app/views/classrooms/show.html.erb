@@ -1,0 +1,28 @@
+<%= render "shared/form_errors", :record => @classroom %>
+
+<p>
+  <b><%= t('form.classroom.name') %></b>
+  <%= @classroom.name %>
+</p>
+<p>
+  <b><%= t('form.classroom.created_at') %></b>
+  <%= @classroom.created_at %>
+</p>
+
+<h2>Disciplinas</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('form.classroom_discipline.discipline') %></th>
+      <th><%= t('form.classroom_discipline.teacher') %></th>
+    </tr>
+  </thead>
+  <tbody id="disc_adding">
+    <%= render :partial => 'disc_add' %>
+  </tbody>
+  <tbody id="disc_listing">
+    <%= render :partial => 'disc_list' %>
+  </tbody>
+</table>
+
+<%= link_to t('helpers.submit.classroom.cancel'), list_classroom_path, :class => 'btn' %>

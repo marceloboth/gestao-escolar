@@ -43,6 +43,7 @@ pt-BR:
 
     classroom:
       name: "Nome"
+      created_at: "Criado em"
 
     classroom_discipline:
       discipline: "Matéria"

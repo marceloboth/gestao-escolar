@@ -1,5 +1,6 @@
 GestaoEscolar::Application.routes.draw do
-  root :to => "home#index"
+
+  root :to => "classrooms#index"
 
   controller :teachers do
     get  "/teachers",
@@ -66,6 +67,10 @@ GestaoEscolar::Application.routes.draw do
       :action => :index,
       :as => :list_classroom
 
+    get "/classrooms/:id/show",
+      :action => :show,
+      :as => :show_classroom
+
     get  "/classrooms/new",
       :action => :new,
       :as => :new_classroom
@@ -90,6 +95,8 @@ GestaoEscolar::Application.routes.draw do
       :action => :destroy,
       :as => false
   end
+
+  resources :classroom_disciplines
 
   controller :students do
     get "/students",

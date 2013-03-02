@@ -1,0 +1,18 @@
+<%= form_for @classroom_discipline, remote: true do |f| %>
+<tr>
+  <td>
+    <%= f.collection_select :discipline_id, Discipline.all, :id, :name,
+        :include_blank => true %>
+  </td>
+  <td>
+    <select name="teacher_id" id="teacher_id">
+      <option value="1">Teacher 1</option>
+      <option value="2">Teacher 2</option>
+      <option value="3">Teacher 3</option>
+    </select>
+  </td>
+  <td>
+    <%= f.submit %>
+  </td>
+</tr>
+<% end %>

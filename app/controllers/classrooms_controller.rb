@@ -3,6 +3,12 @@ class ClassroomsController < ApplicationController
     @classrooms = Classroom.all
   end
 
+  def show
+    @classroom = Classroom.find(params[:id])
+    @classroom_discipline = ClassroomDiscipline.new
+    @classroom_disciplines = ClassroomDiscipline.all
+  end
+
   def new
     @classroom = Classroom.new
   end
@@ -11,7 +17,7 @@ class ClassroomsController < ApplicationController
     @classroom = Classroom.new(params[:classroom])
 
     if @classroom.save
-      redirect_to list_classroom_path,
+      redirect_to show_classroom_path(@classroom.id),
         :notice => t("flash.classroom.create.notice")
     else
       render :new
@@ -26,7 +32,7 @@ class ClassroomsController < ApplicationController
     @classroom = Classroom.find(params[:id])
 
     if @classroom.update_attributes(params[:classroom])
-      redirect_to list_classroom_path,
+      redirect_to show_classroom_path(@classroom.id),
         :notice => t("flash.classroom.update.notice")
     else
       render :edit
