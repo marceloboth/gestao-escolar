@@ -3,7 +3,7 @@ require "spec_helper"
 
 describe  "Edit teacher" do
   before do
-    teacher = teachers(:fake)
+    teacher = teachers(:fake_teacher)
     visit edit_teacher_path(teacher.id)
 
     fill_in t("form.teacher.name"), :with => "Alter McMurray"
@@ -22,7 +22,7 @@ describe  "Edit teacher" do
 
   context "with invalid data" do
     before  do
-      teacher = teachers(:fake)
+      teacher = teachers(:fake_teacher)
       visit edit_teacher_path(teacher.id)
 
       fill_in t("form.teacher.name"), :with => nil
@@ -30,7 +30,7 @@ describe  "Edit teacher" do
     end
 
     it "displays register form" do
-      teacher = teachers(:fake)
+      teacher = teachers(:fake_teacher)
       expect(current_path).to eql(edit_teacher_path(teacher.id))
     end
 

@@ -5,7 +5,7 @@ describe  "New discipline" do
 
   context "with valid data" do
     before do
-      teacher = teachers(:fake)
+      teacher = teachers(:fake_teacher)
 
       visit root_path
       click_link t("menu.discipline")
@@ -28,7 +28,7 @@ describe  "New discipline" do
 
   context "with invalid data" do
     before  do
-      teacher = teachers(:fake)
+      teacher = teachers(:fake_teacher)
 
       visit root_path
       click_link t("menu.discipline")

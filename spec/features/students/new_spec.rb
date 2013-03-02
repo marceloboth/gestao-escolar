@@ -5,7 +5,7 @@ describe  "New student" do
 
   context "with valid data" do
     before do
-      classroom = classrooms(:fake)
+      classroom = classrooms(:fake_classroom)
 
       visit root_path
       click_link t("menu.student")
@@ -28,7 +28,7 @@ describe  "New student" do
 
   context "with invalid data" do
     before  do
-      classroom = classrooms(:fake)
+      classroom = classrooms(:fake_classroom)
 
       visit root_path
       click_link t("menu.student")

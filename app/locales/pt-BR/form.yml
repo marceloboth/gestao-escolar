@@ -20,6 +20,11 @@ pt-BR:
         remove: "Remover"
         cancel: "Cancelar"
 
+      classroom_discipline:
+        create: "Salvar"
+        update: "Alterar"
+        remove: "Remover"
+
       student:
         create: "Salvar"
         update: "Alterar"
@@ -38,6 +43,11 @@ pt-BR:
 
     classroom:
       name: "Nome"
+
+    classroom_discipline:
+      discipline: "Matéria"
+      classroom: "Turma"
+      teacher: "Professor"
 
     student:
       name: "Nome"

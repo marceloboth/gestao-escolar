@@ -1,2 +1,52 @@
 <%= render "shared/form_errors", :record => @classroom %>
 <%= render "classrooms/form", :record => @classroom, :route =>  new_classroom_path %>
+
+<table>
+  <thead>
+    <tr>
+      <td><%= t('form.classroom_discipline.discipline') %></td>
+      <td><%= t('form.classroom_discipline.teacher') %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <select>
+          <option>Math</option>
+          <option>Science</option>
+          <option>Phisics</option>
+        </select>
+      </td>
+      <td>
+        <select>
+          <option>Mário</option>
+          <option>João</option>
+          <option>Paulo</option>
+        </select>
+      </td>
+      <td><a href="">Salvar</a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>
+        Matemática
+      </td>
+      <td>
+        Mário
+      </td>
+      <td><a href="">Alterar</a></td>
+      <td><a href="">Excluir</a></td>
+    </tr>
+    <tr>
+      <td>
+        Geografia
+      </td>
+      <td>
+        Paulo
+      </td>
+      <td><a href="">Alterar</a></td>
+      <td><a href="">Excluir</a></td>
+    </tr>
+  </tbody>
+</table>

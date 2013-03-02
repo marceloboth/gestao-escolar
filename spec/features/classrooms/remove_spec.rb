@@ -3,7 +3,7 @@ require "spec_helper"
 
 describe "Remove classroom" do
   before do
-      classroom = classrooms(:fake)
+      classroom = classrooms(:fake_classroom)
       visit remove_classroom_path(classroom.id)
   end
 

@@ -4,6 +4,6 @@ FactoryGirl.define do
   end
 
   preload do
-    factory(:fake) { create(:classroom) }
+    factory(:fake_classroom) { create(:classroom) }
   end
 end

@@ -1,7 +1,7 @@
 # -*- encoding:utf-8 -*-
 require "spec_helper"
 
-describe "List disciplines" do
+describe "List classrooms" do
   context "When exists data" do
     before do
       visit root_path

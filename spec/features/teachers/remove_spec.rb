@@ -3,7 +3,7 @@ require "spec_helper"
 
 describe "Remove teacher" do
   before do
-      teacher = teachers(:fake)
+      teacher = teachers(:fake_teacher)
       visit remove_teacher_path(teacher.id)
   end
 
