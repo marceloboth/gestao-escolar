@@ -1,0 +1,6 @@
+<% if @classroom_discipline.errors.empty? %>
+  $("#disc_listing").html("<%= j render 'classrooms/disc_list' %>");
+<% else %>
+  alert("<%= j @classroom_discipline.errors.full_messages.join("\n") %>");
+<% end %>
+
