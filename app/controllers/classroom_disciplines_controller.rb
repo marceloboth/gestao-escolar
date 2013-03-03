@@ -20,6 +20,7 @@ class ClassroomDisciplinesController < ApplicationController
   def destroy
     @classroom_discipline = ClassroomDiscipline.find(params[:id])
     @classroom_discipline.destroy
+    @classroom_disciplines = ClassroomDiscipline.all
     respond_with @classroom_discipline
   end
 

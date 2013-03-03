@@ -11,5 +11,10 @@ describe ClassroomDiscipline do
       class_discipline = ClassroomDiscipline.create(:discipline_id => nil)
       expect(class_discipline).to have(1).error_on(:discipline)
     end
+
+      it "requires teacher" do
+      disc_discipline = ClassroomDiscipline.create(:teacher_id => nil)
+      expect(disc_discipline).to have(1).error_on(:teacher)
+    end
   end
 end

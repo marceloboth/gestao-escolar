@@ -4,11 +4,6 @@
     <%= f.text_field :name %>
   </p>
 
-  <p>
-    <%= f.label :teacher_id, t("form.discipline.teacher") %>
-    <%= f.collection_select :teacher_id, Teacher.all, :id, :name, :include_blank => true %>
-  </p>
-
   <p class="submit">
     <%= f.submit %>
   </p>

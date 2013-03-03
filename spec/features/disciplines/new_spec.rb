@@ -5,14 +5,9 @@ describe  "New discipline" do
 
   context "with valid data" do
     before do
-      teacher = teachers(:fake_teacher)
-
       visit root_path
       click_link t("menu.discipline")
       click_link t("titles.discipline.new")
-
-      fill_in t("form.discipline.name"), :with => "discipline"
-      select teacher.name, :from => t("form.discipline.teacher")
 
       click_button t("helpers.submit.discipline.create")
     end
@@ -28,8 +23,6 @@ describe  "New discipline" do
 
   context "with invalid data" do
     before  do
-      teacher = teachers(:fake_teacher)
-
       visit root_path
       click_link t("menu.discipline")
       click_link t("titles.discipline.new")

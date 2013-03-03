@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>Professor</th>
       <th>Ações</th>
     </tr>
   </thead>
@@ -12,7 +11,6 @@
   <% @disciplines.each do |discipline| %>
     <tr>
       <td><%= discipline.name %></td>
-      <td><%= discipline.teacher.name %></td>
       <td>
         <%= link_to 'Editar',  edit_discipline_path(discipline.id) %>
         <%= link_to 'Excluir', remove_discipline_path(discipline.id) %>

@@ -96,7 +96,39 @@ GestaoEscolar::Application.routes.draw do
       :as => false
   end
 
-  resources :classroom_disciplines
+  controller :classroom_disciplines do
+     get "/classroom_disciplines",
+      :action => :index,
+      :as => :classroom_discipline
+
+    get "/classroom_disciplines/:id/show",
+      :action => :show,
+      :as => :show_classroom_discipline
+
+    get  "/classroom_disciplines/new",
+      :action => :new,
+      :as => :new_classroom_discipline
+
+    post "/classroom_disciplines/new",
+      :action => :create,
+      :as => false
+
+    get  "/classroom_disciplines/:id/edit",
+      :action => :edit,
+      :as => :edit_classroom_discipline
+
+    put "/classroom_disciplines/:id/edit",
+      :action => :update,
+      :as => false
+
+    get  "/classroom_disciplines/:id/remove",
+      :action => :remove,
+      :as => :remove_classroom_discipline
+
+    delete "/classroom_disciplines/:id/remove",
+      :action => :destroy,
+      :as => false
+  end
 
   controller :students do
     get "/students",
