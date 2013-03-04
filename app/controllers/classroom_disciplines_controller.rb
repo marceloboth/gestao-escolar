@@ -1,13 +1,13 @@
 class ClassroomDisciplinesController < ApplicationController
 
   respond_to :js
-  before_filter :load_classroom
 
   def create
     @classroom_discipline = ClassroomDiscipline.new(params[:classroom_discipline])
-    @classroom_discipline.classroom_id = @classroom.id
     @classroom_discipline.save
-    @classroom_disciplines = ClassroomDiscipline.all
+    @classroom_disciplines = ClassroomDiscipline.where_classroom_id(@classroom_discipline.classroom_id)
+
+    @classroom = Classroom.find(@classroom_discipline.classroom_id)
     respond_with @classroom_discipline
   end
 
@@ -20,12 +20,8 @@ class ClassroomDisciplinesController < ApplicationController
   def destroy
     @classroom_discipline = ClassroomDiscipline.find(params[:id])
     @classroom_discipline.destroy
-    @classroom_disciplines = ClassroomDiscipline.all
+    @classroom_disciplines = ClassroomDiscipline.where_classroom_id(@classroom_discipline.classroom_id)
     respond_with @classroom_discipline
-  end
-
-  def load_classroom
-    @classroom = Classroom.find(2)
   end
 
 end

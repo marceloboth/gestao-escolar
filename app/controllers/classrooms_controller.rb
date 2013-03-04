@@ -6,7 +6,7 @@ class ClassroomsController < ApplicationController
   def show
     @classroom = Classroom.find(params[:id])
     @classroom_discipline = ClassroomDiscipline.new
-    @classroom_disciplines = ClassroomDiscipline.all
+    @classroom_disciplines = ClassroomDiscipline.where_classroom_id(params[:id])
   end
 
   def new

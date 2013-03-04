@@ -30,3 +30,7 @@ group :development, :test do
   gem "factory_girl"
   gem "factory_girl-preload"
 end
+
+group :production do
+  gem "pg"
+end

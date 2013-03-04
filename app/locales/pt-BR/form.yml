@@ -25,6 +25,9 @@ pt-BR:
         update: "Alterar"
         remove: "Remover"
 
+      report:
+        show: "Exibir"
+
       student:
         create: "Salvar"
         update: "Alterar"
@@ -49,6 +52,10 @@ pt-BR:
       discipline: "Matéria"
       classroom: "Turma"
       teacher: "Professor"
+
+    report:
+      search: "Buscar"
+      type: "Tipo"
 
     student:
       name: "Nome"

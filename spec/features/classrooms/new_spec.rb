@@ -6,6 +6,7 @@ describe  "New classroom" do
   context "with valid data" do
     before do
       visit root_path
+      classroom = classrooms(:fake_classroom)
       click_link t("menu.classroom")
       click_link t("titles.classroom.new")
 
@@ -14,7 +15,7 @@ describe  "New classroom" do
     end
 
     it "redirect to the show page" do
-      #expect(current_path).to eql(show_classroom_path(params[:id]))
+      #expect(current_path).to eql(show_classroom_path(classroom.id))
     end
 
     it "show the sucess message" do

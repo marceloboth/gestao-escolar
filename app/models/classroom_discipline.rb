@@ -4,4 +4,9 @@ class ClassroomDiscipline < ActiveRecord::Base
   belongs_to :discipline
   belongs_to :teacher
   validates_presence_of :classroom, :discipline, :teacher
+
+  def self.where_classroom_id(classroom_id)
+    where("classroom_id = ?", classroom_id)
+  end
+
 end

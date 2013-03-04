@@ -99,7 +99,7 @@ GestaoEscolar::Application.routes.draw do
   controller :classroom_disciplines do
      get "/classroom_disciplines",
       :action => :index,
-      :as => :classroom_discipline
+      :as => :list_classroom_discipline
 
     get "/classroom_disciplines/:id/show",
       :action => :show,
@@ -128,6 +128,20 @@ GestaoEscolar::Application.routes.draw do
     delete "/classroom_disciplines/:id/remove",
       :action => :destroy,
       :as => false
+  end
+
+  controller :reports do
+    get "/report/new",
+      :action => :new,
+      :as => :new_report
+
+    post "/report/new",
+      :action => :create,
+      :as => false
+
+    get "/report/show",
+      :action => :show,
+      :as => :show_report
   end
 
   controller :students do

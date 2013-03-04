@@ -82,6 +82,7 @@ GEM
     multi_json (1.6.1)
     mysql2 (0.3.11)
     nokogiri (1.5.6)
+    pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -174,6 +175,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   mysql2
+  pg
   pry
   pry-rails
   rails (= 3.2.11)
