@@ -2,7 +2,6 @@ source :rubygems
 
 gem "rails", "3.2.11"
 gem "rails-i18n"
-gem "mysql2"
 gem "foreigner"
 
 group :assets do
@@ -13,12 +12,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
-#workaround to not get 'could not find a javascript runtime' bug
 gem 'execjs'
 gem "therubyracer"
 
 
 group :development do
+  gem "mysql2"
   gem "pry"
   gem "pry-rails"
   gem "awesome_print"
